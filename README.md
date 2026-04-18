@@ -58,6 +58,8 @@ docker run --env-file .env agents
 See `.env.example` for all available environment variables.
 
 > **Personal note:** I've been testing with `TRADE_INTERVAL=300` (5 minutes) and `MAX_POSITION_SIZE=10` USDC as conservative defaults while learning the system. Recommend starting low.
+>
+> Also useful: set `DRY_RUN=true` to simulate trades without actually submitting orders — good for sanity-checking a new strategy before going live.
 
 ## Contributing
 
