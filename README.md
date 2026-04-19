@@ -68,6 +68,12 @@ See `.env.example` for all available environment variables.
 > python -m agents.main 2>&1 | grep -i "order\|position\|skip"
 > ```
 > Cuts down the noise when running in DEBUG mode.
+>
+> **Another useful filter** — if you want to watch only filled/cancelled order events and ignore the polling heartbeat lines:
+> ```bash
+> python -m agents.main 2>&1 | grep -iv "polling\|heartbeat\|order\|position\|skip"
+> ```
+> Handy when you just want a quiet summary view without the per-tick noise.
 
 ## Contributing
 
