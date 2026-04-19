@@ -62,6 +62,12 @@ See `.env.example` for all available environment variables.
 > Also useful: set `DRY_RUN=true` to simulate trades without actually submitting orders — good for sanity-checking a new strategy before going live.
 >
 > **Logging tip:** Set `LOG_LEVEL=DEBUG` when troubleshooting — it prints the full market payload and order details, which is really helpful for understanding why an agent skipped a market or sized a position the way it did.
+>
+> **Useful one-liner to tail only order-related log lines:**
+> ```bash
+> python -m agents.main 2>&1 | grep -i "order\|position\|skip"
+> ```
+> Cuts down the noise when running in DEBUG mode.
 
 ## Contributing
 
